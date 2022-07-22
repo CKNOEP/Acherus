@@ -1,0 +1,55 @@
+## Interface: 30400
+## Author: Kollektiv , reborn by l'ancestre
+## Version: @project-version@
+## Title: Acherus WOTLK Classic
+## Notes: Simple and clean Death Knight displays
+## Notes-deDE: Simple and clean Death Knight displays
+## Notes-frFR: Simple and clean Death Knight displays
+## Notes-koKR: Simple and clean Death Knight displays
+## Notes-esMX: Simple and clean Death Knight displays
+## Notes-ruRU: Simple and clean Death Knight displays
+## Notes-zhCN: Simple and clean Death Knight displays
+## Notes-esES: Simple and clean Death Knight displays
+## Notes-zhTW: Simple and clean Death Knight displays
+
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, ButtonFacade
+## SavedVariables: AcherusDB
+## LoadManagers: AddonLoader
+## X-LoadOn-Class: DeathKnight
+## X-Curse-Packaged-Version: 1.0.3
+## X-Curse-Project-Name: Acherus Runes
+## X-Curse-Project-ID: 648743
+
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\LibSharedMedia-3.0\lib.xml
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+Libs\LibButtonFacade.xml
+#@end-no-lib-strip@
+Libs\LibDataBroker-1.1.lua
+#@no-lib-strip@
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+#@end-no-lib-strip@
+
+Locales.lua
+Skins.lua
+
+Core.lua
+EnhancedStatusBar.lua
+Options.lua
+Media.lua
+Animations.lua
+RunicPower.lua
+Runes.lua
+Procs.lua
+Diseases.lua
