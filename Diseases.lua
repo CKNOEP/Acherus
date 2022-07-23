@@ -173,7 +173,7 @@ function Diseases:CreateTextures()
 		textures[i].disease = disease
 		textures[i]:SetTexCoord(0.07,0.93,0.07,0.93)
 		textures[i].SetSize = SetSize
-		print ("create texture disease ",i, disease)
+		--print ("create texture disease ",i, disease)
 	end
 end
 
@@ -275,7 +275,7 @@ function Diseases:UpdateDiseaseTimers()
 	if maxtime ~= (12 + 3 * select(5,GetTalentInfo(3,5))) then self:UpdateDiseaseBar() end
 	self:ClearDiseaseTimers()
 	local go = self:ScanTargetDebuffs()
-	print("Update - go ",go)
+	--print("Update - go ",go)
 	if go then 
 		if bar:GetAlpha() < 1 then bar:SetAlpha(1) end
 		self:FindOverlaps()
@@ -288,7 +288,7 @@ function Diseases:UpdateDiseaseTimers()
 end
 
 function Diseases:ClearDiseaseTimers()
-	print ("clear DiseaseTimers")
+	--print ("clear DiseaseTimers")
 	self.frame:SetScript("OnUpdate",nil)
 	self:ResetFontStringAlphas()
 	for _,tex in pairs(textures) do self:ReleaseTexture(tex) end
@@ -327,7 +327,7 @@ function Diseases:ScanTargetDebuffs()
 
 		local name, icon, count, debuffType, duration, expirationTime, unitCaster, isStealable, shouldConsolidate, spellId  = UnitDebuff("target", i);
 		--local name,_,icon,_,_,_,expTime,owner = UnitDebuff("target",tex.disease)
-		if name then print (name,"-",i,tex.disease) end
+		--if name then print (name,"-",i,tex.disease) end
 			if name and unitCaster and unitCaster == "player" and tex.disease == name then
 				tex:SetAlpha(db.iconalpha)
 				tex:SetTexture(icon)
