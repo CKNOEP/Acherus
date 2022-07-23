@@ -1,6 +1,6 @@
 --[[
 	Project: Acherus WLTK Classic
-	Website: http://www.wowace.com/projects/acherus/
+	Website: https://www.curseforge.com/wow/addons/acherus-wltk-classic
 	Rev: 10
 	Author: kollektiv, lancestre
 

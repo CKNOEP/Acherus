@@ -1,6 +1,6 @@
 --[[
 	Project: Acherus WLTK Classic
-	Website: http://www.wowace.com/projects/acherus/
+	Website: https://www.curseforge.com/wow/addons/acherus-wltk-classic
 	Rev: 10
 	Author: kollektiv, lancestre
 
@@ -112,7 +112,7 @@ L["Credits"],
 "Psyquest",L["French translations"], -- 5
 "Defia, Masodcn, Cimmerie, Cache82",L["Simplified Chinese translations"], -- 6
 "Tushiyang, MusicOnline",L["Traditional Chinese translations"], -- 7
-L["Find updates at"],"http://www.wowace.com/projects/acherus/"),
+L["Find updates at"],"https://www.curseforge.com/wow/addons/acherus-wltk-classic"),
 						order = 200,
 					},
 				},

@@ -1,6 +1,6 @@
 --[[
 	Project: Acherus WLTK Classic
-	Website: http://www.wowace.com/projects/acherus/
+	Website: https://www.curseforge.com/wow/addons/acherus-wltk-classic
 	Rev: 6
 	Author: kollektiv, lancestre
 
@@ -125,7 +125,7 @@ function Acherus:OnInitialize()
 	})
 	if LDBIcon then LDBIcon:Register("Acherus",self.launcher,self.db.global.minimap) end
 
-	self:print(L["Acherus by Kollektiv. Type /ac or /acherus to open options"])
+	self:print(L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"])
 end
 
 function Acherus:print(s,...)

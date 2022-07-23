@@ -1,6 +1,6 @@
 --[[
 	Project: Acherus WLTK Classic
-	Website: http://www.wowace.com/projects/acherus/
+	Website: https://www.curseforge.com/wow/addons/acherus-wltk-classic
 	Rev: 2
 	Author: kollektiv, lancestre
 
@@ -21,12 +21,12 @@
 
 --[[
 	The contents of this file are auto-generated using the WoWAce localization application
-	Please go to http://www.wowace.com/projects/acherus/localization/ to update translations.
+	Please go to https://www.curseforge.com/wow/addons/acherus-wltk-classiclocalization/ to update translations.
 	Anyone with a wowace/curseforge account can edit them. 
 ]] 
 
 local AL = LibStub("AceLocale-3.0")
-local debug = false
+local debug = true
 --[===[@debug@
 debug = true
 --@end-debug@]===]
@@ -40,7 +40,7 @@ L["80 >= RP"] = true
 L["80 > RP >= 60"] = true
 L["About"] = true
 L["Acherus"] = true
-L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = true
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = true
 L["Acherus is now locked"] = true
 L["Acherus is now unlocked"] = true
 L[ [=[A proc will start maximized and then minimize.
@@ -252,7 +252,7 @@ L["80 >= RP"] = "80 >= RP"
 L["80 > RP >= 60"] = "80 > RP >= 60"
 L["About"] = "Über"
 L["Acherus"] = "Acherus"
-L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = "Acherus von Kollektiv. Gib /ac oder /acherus ein, um ins Optionsmen\\195\\188 zu gelangen"
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "Acherus von Kollektiv.& Lancestre. Gib /ac oder /acherus ein, um ins Optionsmen\\195\\188 zu gelangen"
 L["Acherus is now locked"] = "Acherus ist jetzt fixiert"
 L["Acherus is now unlocked"] = "Acherus ist jetzt frei gegeben"
 L[ [=[A proc will start maximized and then minimize.
@@ -471,7 +471,7 @@ if L then
 -- L["80 > RP >= 60"] = ""
 -- L["About"] = ""
 -- L["Acherus"] = ""
--- L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = ""
+-- L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = ""
 -- L["Acherus is now locked"] = ""
 -- L["Acherus is now unlocked"] = ""
 --[==[ L[ [=[A proc will start maximized and then minimize.
@@ -680,7 +680,7 @@ if L then
 -- L["80 > RP >= 60"] = ""
 -- L["About"] = ""
 -- L["Acherus"] = ""
--- L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = ""
+-- L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = ""
 -- L["Acherus is now locked"] = ""
 -- L["Acherus is now unlocked"] = ""
 --[==[ L[ [=[A proc will start maximized and then minimize.
@@ -889,7 +889,7 @@ L["80 >= RP"] = "80 >= RP"
 L["80 > RP >= 60"] = "80 > RP >= 60"
 L["About"] = "A Propos"
 L["Acherus"] = "Acherus"
-L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = "Acherus par Kollektiv"
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "Acherus par Kollektiv"
 L["Acherus is now locked"] = "Acherus est maintenant verrouillé."
 L["Acherus is now unlocked"] = "Acherus est maintenant dévérouillé."
 --[==[ L[ [=[A proc will start maximized and then minimize.
@@ -1098,7 +1098,7 @@ if L then
 -- L["80 > RP >= 60"] = ""
 -- L["About"] = ""
 -- L["Acherus"] = ""
--- L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = ""
+-- L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = ""
 -- L["Acherus is now locked"] = ""
 -- L["Acherus is now unlocked"] = ""
 --[==[ L[ [=[A proc will start maximized and then minimize.
@@ -1307,7 +1307,7 @@ if L then
 -- L["80 > RP >= 60"] = ""
 -- L["About"] = ""
 -- L["Acherus"] = ""
--- L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = ""
+-- L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = ""
 -- L["Acherus is now locked"] = ""
 -- L["Acherus is now unlocked"] = ""
 --[==[ L[ [=[A proc will start maximized and then minimize.
@@ -1516,7 +1516,7 @@ L["80 >= RP"] = "80>=当前符文能量 i think it should be rp>=80?"
 L["80 > RP >= 60"] = "80>当前符文能量>=60"
 L["About"] = "关于"
 L["Acherus"] = "Acherus符文监控插件"
-L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = "Acherus符文监控插件by Kollektiv. 输入 /ac 或 /acherus 进行配置"
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "Acherus符文监控插件by Kollektiv.& Lancestre. 输入 /ac 或 /acherus 进行配置"
 L["Acherus is now locked"] = "Acherus符文监控插件的所有框体已被锁定."
 L["Acherus is now unlocked"] = "Acherus符文监控插件的所有框体已被解锁."
 L[ [=[A proc will start maximized and then minimize.
@@ -1734,7 +1734,7 @@ L["80 >= RP"] = "80 >= 符能"
 L["80 > RP >= 60"] = "80 > 符能 >= 60"
 L["About"] = "關于"
 L["Acherus"] = "╬亞榭洛╬"
-L["Acherus by Kollektiv. Type /ac or /acherus to open options"] = "╬亞榭洛╬由.Kollektiv.編寫. 鍵入: /ac 或者 /acherus 來開啟選項"
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "╬亞榭洛╬由.Kollektiv.& Lancestre.編寫. 鍵入: /ac 或者 /acherus 來開啟選項"
 L["Acherus is now locked"] = "╬亞榭洛╬已鎖定"
 L["Acherus is now unlocked"] = "╬亞榭洛╬已解鎖"
 L[ [=[A proc will start maximized and then minimize.
