@@ -1,6 +1,6 @@
 ## Interface: 30400
 ## Author: Kollektiv , reborn by l'ancestre
-## Version: 3.4.0.2
+## Version: 3.4.0.3
 ## Title: Acherus WOTLK Classic
 ## Notes: Simple and clean Death Knight displays
 ## Notes-deDE: Simple and clean Death Knight displays
