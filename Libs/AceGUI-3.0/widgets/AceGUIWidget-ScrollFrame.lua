@@ -157,7 +157,7 @@ do
 	end
 	
 	local function Constructor()
-		local frame = CreateFrame("Frame",nil,UIParent)
+		local frame = CreateFrame("Frame",nil,UIParent,BackdropTemplateMixin and "BackdropTemplate")
 		local self = {}
 		self.type = Type
 	
@@ -177,7 +177,7 @@ do
 		frame.obj = self
 
 		--Container Support
-		local scrollframe = CreateFrame("ScrollFrame",nil,frame)
+		local scrollframe = CreateFrame("ScrollFrame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		local content = CreateFrame("Frame",nil,scrollframe)
 		createdcount = createdcount + 1
 		local scrollbar = CreateFrame("Slider",("AceConfigDialogScrollFrame%dScrollBar"):format(createdcount),scrollframe,"UIPanelScrollBarTemplate")

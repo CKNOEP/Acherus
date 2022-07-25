@@ -41,8 +41,8 @@ local GetRuneCooldown = GetRuneCooldown
 local UnitGUID,GetTime = UnitGUID, GetTime
 
 local RUNETYPE_BLOOD  = 1
-local RUNETYPE_UNHOLY = 2
-local RUNETYPE_FROST  = 3
+local RUNETYPE_UNHOLY = 3
+local RUNETYPE_FROST  = 2
 local RUNETYPE_DEATH  = 4
 
 local EDGESIZE = 7
@@ -324,7 +324,10 @@ function Runes:CreateBars()
 	for id=1,6 do
 		local bar = Acherus:CreateEnhancedStatusBar(self.frame:GetName().."Bar"..id,self.barparent,BackdropTemplateMixin and "BackdropTemplate")
 		bar.id = id
-		bar.type = ceil(id/2)
+		--rune.type = ceil(id/2)
+		--rune.type = GetRuneType(id)
+		bar.type = tonumber(GetRuneType(id))
+		
 		bar:SetFrameStrata("LOW")
 		bar:SetBackdrop(Acherus.backdrop)
 
@@ -363,8 +366,10 @@ function Runes:CreateRunes()
 	for id=1,6 do
 		local rune = CreateFrame("Frame",self.frame:GetName().."Rune"..id,self.frame,BackdropTemplateMixin and "BackdropTemplate")
 		rune.id = id
-		rune.type = ceil(id/2)
-
+		--rune.type = ceil(id/2)
+		
+		rune.type = tonumber(GetRuneType(id))
+		
 		local anchor = CreateFrame("Frame",nil,rune,BackdropTemplateMixin and "BackdropTemplate")
 		anchor:SetWidth(1); anchor:SetHeight(1)
 		anchor:SetPoint("CENTER")
@@ -722,6 +727,7 @@ function Runes:UpdateRunePower(rune,usable)
 end
 
 function Runes:RUNE_POWER_UPDATE(_,rune,usable)
+--print (_,rune,"type ", GetRuneType(rune),usable)
 	self:UpdateRunePower(rune,usable)
 end
 
@@ -753,6 +759,7 @@ function Runes:UpdateRuneType(rune)
 end
 
 function Runes:RUNE_TYPE_UPDATE(_,rune)
+--print (_,rune,usable)
 	self:UpdateRuneType(rune)
 end
 

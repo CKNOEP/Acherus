@@ -65,7 +65,7 @@ do
 	end
 	
 	local function Constructor()
-		local frame = CreateFrame("Frame",nil,UIParent)
+		local frame = CreateFrame("Frame",nil,UIParent,BackdropTemplateMixin and "BackdropTemplate")
 		local self = {}
 		self.type = Type
 
@@ -83,7 +83,7 @@ do
 		frame:SetFrameStrata("FULLSCREEN_DIALOG")
 		
 		--Container Support
-		local content = CreateFrame("Frame",nil,frame)
+		local content = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.content = content
 		content.obj = self
 		content:SetPoint("TOPLEFT",frame,"TOPLEFT",0,0)

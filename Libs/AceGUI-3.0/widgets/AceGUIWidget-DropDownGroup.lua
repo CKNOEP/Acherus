@@ -144,7 +144,7 @@ do
 		dropdown.frame:Show()
 		dropdown:SetLabel("")
 		
-		local border = CreateFrame("Frame",nil,frame)
+		local border = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.border = border
 		border:SetPoint("TOPLEFT",frame,"TOPLEFT",3,-40)
 		border:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-3,3)

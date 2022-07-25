@@ -1,0 +1,12 @@
+lightweight tag ab075ebc0099c02ba72951cf02bf271becf6b139 3.4.0.2
+Author:	LANCESTRE <lancetre@intenebris.org>
+Date:	Sat Jul 23 09:38:31 2022 +0200
+
+commit ab075ebc0099c02ba72951cf02bf271becf6b139
+Author: LANCESTRE <lancetre@intenebris.org>
+Date:   Sat Jul 23 09:38:31 2022 +0200
+
+    Diseases update
+    
+    Fix Unitdebuff new API parameter
+

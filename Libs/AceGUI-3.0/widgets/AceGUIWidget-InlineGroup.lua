@@ -86,7 +86,7 @@ do
 	end
 	
 	local function Constructor()
-		local frame = CreateFrame("Frame",nil,UIParent)
+		local frame = CreateFrame("Frame",nil,UIParent,BackdropTemplateMixin and "BackdropTemplate")
 		local self = {}
 		self.type = Type
 
@@ -112,7 +112,7 @@ do
 		
 		self.titletext = titletext	
 		
-		local border = CreateFrame("Frame",nil,frame)
+		local border = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.border = border
 		border:SetPoint("TOPLEFT",frame,"TOPLEFT",3,-17)
 		border:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-3,3)

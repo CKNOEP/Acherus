@@ -368,6 +368,7 @@ function SettingsHandler:GetSounds()
 	self.sounds = self.sounds or {}
 	wipe(self.sounds)
 	for _, name in pairs(SM:List("sound")) do self.sounds[name] = name end
+	print (self.sounds[name])
 	return self.sounds
 end
 

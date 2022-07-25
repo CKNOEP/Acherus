@@ -889,7 +889,7 @@ L["80 >= RP"] = "80 >= RP"
 L["80 > RP >= 60"] = "80 > RP >= 60"
 L["About"] = "A Propos"
 L["Acherus"] = "Acherus"
-L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "Acherus par Kollektiv"
+L["Acherus by Kollektiv.& Lancestre. Type /ac or /acherus to open options"] = "Acherus WOTLK par Lancestre"
 L["Acherus is now locked"] = "Acherus est maintenant verrouillé."
 L["Acherus is now unlocked"] = "Acherus est maintenant dévérouillé."
 --[==[ L[ [=[A proc will start maximized and then minimize.

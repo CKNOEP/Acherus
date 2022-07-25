@@ -607,7 +607,7 @@ do
 
 	local createdcount = 0
 	local function Constructor()
-		local frame = CreateFrame("Frame",nil,UIParent)
+		local frame = CreateFrame("Frame",nil,UIParent,BackdropTemplateMixin and "BackdropTemplate")
 		local self = {}
 		self.type = Type
 		self.lines = {}
@@ -618,7 +618,7 @@ do
 		self.localstatus.groups = {}
 		self.filter = false
 		
-		local treeframe = CreateFrame("Frame",nil,frame)
+		local treeframe = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		treeframe.obj = self
 		treeframe:SetPoint("TOPLEFT",frame,"TOPLEFT",0,0)
 		treeframe:SetPoint("BOTTOMLEFT",frame,"BOTTOMLEFT",0,0)
@@ -635,7 +635,7 @@ do
 		treeframe:SetResizable(true)
 		treeframe:SetMinResize(100, 1)
 		treeframe:SetMaxResize(400,1600)
-		local dragger = CreateFrame("Frame", nil, treeframe)
+		local dragger = CreateFrame("Frame", nil, treeframe,BackdropTemplateMixin and "BackdropTemplate")
 		dragger:SetWidth(8)
 		dragger:SetPoint("TOP", treeframe, "TOPRIGHT")
 		dragger:SetPoint("BOTTOM", treeframe, "BOTTOMRIGHT")
@@ -690,7 +690,7 @@ do
 		scrollbar:SetWidth(16)
 		self.noupdate = nil
 
-		local border = CreateFrame("Frame",nil,frame)
+		local border = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.border = border
 		border:SetPoint("TOPLEFT",treeframe,"TOPRIGHT", 0,0)
 		border:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",0,0)

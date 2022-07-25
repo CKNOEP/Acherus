@@ -25,7 +25,9 @@ Acherus.frame:SetAllPoints(UIParent)
 Acherus.anchor = CreateFrame("Frame",Acherus.frame:GetName().."Anchor",UIParent)
 Acherus.version = GetAddOnMetadata("Acherus","Version")
 local	L, SM = LibStub("AceLocale-3.0"):GetLocale("Acherus", true), LibStub("LibSharedMedia-3.0")
-Acherus.L, Acherus.SM = L,SM
+local LSM30 = SM
+Acherus.L, Acherus.SM = L, SM
+
 local ACD = LibStub("AceConfigDialog-3.0")
 local LDB = LibStub("LibDataBroker-1.1")
 local LDBIcon = LibStub("LibDBIcon-1.0",true)

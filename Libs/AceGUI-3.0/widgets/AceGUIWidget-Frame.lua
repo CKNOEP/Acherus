@@ -144,7 +144,7 @@ do
 	end
 	
 	local function Constructor()
-		local frame = CreateFrame("Frame",nil,UIParent)
+		local frame = CreateFrame("Frame",nil,UIParent,BackdropTemplateMixin and "BackdropTemplate")
 		local self = {}
 		self.type = "Frame"
 		
@@ -178,7 +178,7 @@ do
 		frame:SetMinResize(400,200)
 		frame:SetToplevel(true)
 		
-		local closebutton = CreateFrame("Button",nil,frame,"UIPanelButtonTemplate")
+		local closebutton = CreateFrame("Button",nil,frame,"UIPanelButtonTemplate",BackdropTemplateMixin and "BackdropTemplate")
 		closebutton:SetScript("OnClick", closeOnClick)
 		closebutton:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-27,17)
 		closebutton:SetHeight(20)
@@ -188,7 +188,7 @@ do
 		self.closebutton = closebutton
 		closebutton.obj = self
 		
-		local statusbg = CreateFrame("Frame",nil,frame)
+		local statusbg = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		statusbg:SetPoint("BOTTOMLEFT",frame,"BOTTOMLEFT",15,15)
 		statusbg:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-132,15)
 		statusbg:SetHeight(24)
@@ -205,7 +205,7 @@ do
 		statustext:SetJustifyH("LEFT")
 		statustext:SetText("")
 		
-		local title = CreateFrame("Frame",nil,frame)
+		local title = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.title = title
 		title:EnableMouse()
 		title:SetScript("OnMouseDown",titleOnMouseDown)
@@ -239,7 +239,7 @@ do
 	
 		self.titletext = titletext	
 		
-		local sizer_se = CreateFrame("Frame",nil,frame)
+		local sizer_se = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		sizer_se:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",0,0)
 		sizer_se:SetWidth(25)
 		sizer_se:SetHeight(25)
@@ -266,7 +266,7 @@ do
 		local x = 0.1 * 8/17
 		line2:SetTexCoord(0.05 - x, 0.5, 0.05, 0.5 + x, 0.05, 0.5 - x, 0.5 + x, 0.5)
 
-		local sizer_s = CreateFrame("Frame",nil,frame)
+		local sizer_s = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		sizer_s:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-25,0)
 		sizer_s:SetPoint("BOTTOMLEFT",frame,"BOTTOMLEFT",0,0)
 		sizer_s:SetHeight(25)
@@ -275,7 +275,7 @@ do
 		sizer_s:SetScript("OnMouseUp", sizerOnMouseUp)
 		self.sizer_s = sizer_s
 		
-		local sizer_e = CreateFrame("Frame",nil,frame)
+		local sizer_e = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		sizer_e:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",0,25)
 		sizer_e:SetPoint("TOPRIGHT",frame,"TOPRIGHT",0,0)
 		sizer_e:SetWidth(25)
@@ -285,7 +285,7 @@ do
 		self.sizer_e = sizer_e
 	
 		--Container Support
-		local content = CreateFrame("Frame",nil,frame)
+		local content = CreateFrame("Frame",nil,frame,BackdropTemplateMixin and "BackdropTemplate")
 		self.content = content
 		content.obj = self
 		content:SetPoint("TOPLEFT",frame,"TOPLEFT",17,-27)

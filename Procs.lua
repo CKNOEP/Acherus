@@ -96,21 +96,40 @@ function Procs:ShowHideAnchors(func)
 	end
 end
 
-function Procs:COMBAT_LOG_EVENT_UNFILTERED(_, _, eventtype, _, _, _, dstGUID, _, _, spellID)
+local f = CreateFrame("Frame")
+f:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+f:SetScript("OnEvent", function(self, event)
+	Procs:COMBAT_LOG_EVENT_UNFILTERED(CombatLogGetCurrentEventInfo())
+end)
 
-
-	if dstGUID == self.pGUID then
-		local proc = self.procs[spellID]
+function Procs:COMBAT_LOG_EVENT_UNFILTERED(...)
+	local timestamp, subevent, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellId, spellName, _, auraType = ...
+	local spellId, spellName, spellSchool
+	local amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing, isOffHand
+	
+	if subevent == "SPELL_AURA_APPLIED" then
+	
+	spellId = select(12, ...)
+	--print (subEvent,spellId,auraType,destGUID,UnitGUID("player"))
+	end
+	
+	
+	
+	if destGUID == UnitGUID("player") then
+		
+		local proc = self.procs[spellId]
+		
+		--print (spellId,proc)
+		
 		if proc and proc.enabled then
-			if eventtype == "SPELL_AURA_APPLIED" or eventtype == "SPELL_AURA_REFRESH" then
+			if subevent == "SPELL_AURA_APPLIED" or subevent == "SPELL_AURA_REFRESH" then
 				self:Activate(proc)
-			elseif eventtype == "SPELL_AURA_REMOVED" then
+			elseif subevent == "SPELL_AURA_REMOVED" then
 				self:Release(proc)
 			end
 		end
 	end
 end
-
 
 function Procs:OnUpdate(elapsed)
 	local n,i = #active,1
@@ -282,6 +301,7 @@ function Procs:CreateProcs()
 	for spellid in pairs(db.data) do
 		local name,_,texture = GetSpellInfo(spellid)
 		if not self.procs[spellid] then self.procs[spellid] = self:CreateProc(name,texture,spellid) end
+		--print (self.procs[spellid].name,self.procs[spellid].spellid)
 	end
 end
 
