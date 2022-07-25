@@ -1,6 +1,0 @@
-
-package-as:Acherus
-
-enable-nolib-creation: no
-
-manual-changelog: CHANGES.txt
