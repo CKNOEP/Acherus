@@ -1,6 +1,6 @@
-## Interface: 30400
+## Interface: 40400
 ## Author: Kollektiv , reborn by l'ancestre
-## Version: 3.4.0.3
+## Version: 4.4.0.1
 ## Title: Acherus WOTLK Classic
 ## Notes: Simple and clean Death Knight displays
 ## Notes-deDE: Simple and clean Death Knight displays
@@ -16,7 +16,7 @@
 ## SavedVariables: AcherusDB
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Class: DeathKnight
-## X-Curse-Packaged-Version: @project-version@
+## X-Curse-Packaged-Version: 3.4.0.4
 ## X-Curse-Project-Name: Acherus Runes WOTLK
 ## X-Curse-Project-ID: 648743
 

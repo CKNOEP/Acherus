@@ -1,12 +1,10 @@
-lightweight tag ab075ebc0099c02ba72951cf02bf271becf6b139 3.4.0.2
+lightweight tag d3d790a284906646460829ab74b2f2f1d054bb73 3.4.0.4
 Author:	LANCESTRE <lancetre@intenebris.org>
-Date:	Sat Jul 23 09:38:31 2022 +0200
+Date:	Mon Jul 25 16:58:58 2022 +0200
 
-commit ab075ebc0099c02ba72951cf02bf271becf6b139
+commit d3d790a284906646460829ab74b2f2f1d054bb73
 Author: LANCESTRE <lancetre@intenebris.org>
-Date:   Sat Jul 23 09:38:31 2022 +0200
+Date:   Mon Jul 25 16:58:58 2022 +0200
 
-    Diseases update
-    
-    Fix Unitdebuff new API parameter
+    Delete pkgmeta.yaml
 

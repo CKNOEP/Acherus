@@ -102,9 +102,10 @@ name = format(
 
 %s |cffffff78%s|r]=]
 ,
-L["Author"],"Kollektiv, lancestre",
+L["Author"],"Kollektiv, lancestre, moosetraxftw",
 L["Credits"],
 "lancestre",L["WOTLK classic version"],
+"moosetraxftw",L["CATA classic version"],
 "Kassay",L["Triangle texture"], -- 1
 "Nathyrra",L["Inspiration, ideas, and testing"], -- 2
 "DKI, Ebon Blade",L["Rune icons"], -- 3

@@ -1,5 +1,5 @@
 --[[
-	Project: Acherus WLTK Classic
+	Project: Acherus Cataclysm Classic
 	Website: https://www.curseforge.com/wow/addons/acherus-wltk-classic
 	Rev: 16
 	Author: kollektiv, lancestre
@@ -18,6 +18,7 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ]] 
+if select(2,UnitClass("player")) ~= "DEATHKNIGHT" then return end
 
 local Acherus = Acherus
 local L,SM = Acherus.L, Acherus.SM
@@ -40,10 +41,10 @@ local EDGESIZE = 7
 local temp = {}
 local data = {}
 local spellids = {
-	59921,-- fievre de sang
-	55078,-- peste de sang
-	49632,-- fievre de la crypte 
-	51735 -- peste d'ebène
+	55078, -- Blood Plague
+	59921, -- Frost Fever
+	65142, -- Ebon Plague
+	81130, -- Scarlet Fever
 }
 for k,v in ipairs(spellids) do data[k] = GetSpellInfo(v) end
 
@@ -106,7 +107,7 @@ function Diseases:PLAYER_ENTERING_WORLD()
 end
 
 function Diseases:CountEpidemicPoints()
-	maxtime = 15 + 3 * select(5,GetTalentInfo(3,5)) -- Epidemic talent (Rang 1 +3sec - Rang2 +6Sec) 
+	maxtime = 21 + 4 * select(5,GetTalentInfo(3,3)) -- Epidemic talent
 end
 
 local border = {edgeFile="",edgeSize=EDGESIZE,insets={left=0,right=0,top=0,bottom=0}}
@@ -173,7 +174,6 @@ function Diseases:CreateTextures()
 		textures[i].disease = disease
 		textures[i]:SetTexCoord(0.07,0.93,0.07,0.93)
 		textures[i].SetSize = SetSize
-		--print ("create texture disease ",i, disease)
 	end
 end
 
@@ -222,8 +222,6 @@ local getPoint = {
 function Diseases:OnUpdate(elapsed)
 	local go = false
 	for _,tex in ipairs(textures) do
-		
-		--print("texture",tex, "active :", tex.active)
 		if tex.active then
 			go = true
 			tex.timeleft = tex.timeleft - elapsed
@@ -272,10 +270,9 @@ function Diseases:FindOverlaps()
 end
 
 function Diseases:UpdateDiseaseTimers()
-	if maxtime ~= (12 + 3 * select(5,GetTalentInfo(3,5))) then self:UpdateDiseaseBar() end
+	if maxtime ~= (12 + 3 * select(5,GetTalentInfo(3,4))) then self:UpdateDiseaseBar() end
 	self:ClearDiseaseTimers()
 	local go = self:ScanTargetDebuffs()
-	--print("Update - go ",go)
 	if go then 
 		if bar:GetAlpha() < 1 then bar:SetAlpha(1) end
 		self:FindOverlaps()
@@ -288,7 +285,6 @@ function Diseases:UpdateDiseaseTimers()
 end
 
 function Diseases:ClearDiseaseTimers()
-	--print ("clear DiseaseTimers")
 	self.frame:SetScript("OnUpdate",nil)
 	self:ResetFontStringAlphas()
 	for _,tex in pairs(textures) do self:ReleaseTexture(tex) end
@@ -302,7 +298,7 @@ function Diseases:Test()
 	self:ClearDiseaseTimers()
 	UIFrameFadeRemoveFrame(bar)
 	for i,spellid in ipairs(spellids) do
-		if i == 5 then break end -- Only show three
+		if i == 4 then break end -- Only show three
 		local tex = textures[i]
 		tex:SetTexture(select(3,GetSpellInfo(spellid)))
 		tex:SetAlpha(db.iconalpha)
@@ -319,8 +315,6 @@ end
 
 function Diseases:ScanTargetDebuffs()
 	local go = false
-	
-	
 	for _,tex in ipairs(textures) do
 	for i=1,40 do	
 				--print ("i = ",i)
