@@ -629,7 +629,25 @@ function Runes:OnUpdate(elapsed)
 			bar.onestext:SetText(max(sec,0))
 			if db.enablegradualfadein then
 				local alpha = timeleft >= db.gradualendtime and db.gradualstartalpha+(db.gradualendalpha-db.gradualstartalpha)*(1-((timeleft - db.gradualendtime)/(10 - db.gradualendtime))) or db.gradualendalpha
-				bar:SetAlpha(alpha)
+					if tonumber(alpha) then
+						
+						
+						if alpha > 1 then
+						--print("Alpha",alpha)
+						alpha = 1
+						end
+						
+						if alpha < 0 then
+						alpha = 0
+						--print("Alpha",alpha)
+						end
+						bar:SetAlpha(alpha)	
+					
+					else
+						--print("Alpha",alpha)
+					end
+				
+			
 			else bar:SetAlpha(1) end
 
 			if db.enableicongradualfadein then
